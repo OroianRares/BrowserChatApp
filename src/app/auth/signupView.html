@@ -1,0 +1,51 @@
+<div class="container-fluid">
+  <div class="col-md-6" style="border: 5px solid green">
+    <company-logo></company-logo>
+    <hr>
+    <h2 class="text-center" style="color: darkblue">Register new account</h2>
+    <form name="regForm">
+      <div class="form-group">
+        <label for="username">Username:</label>
+        <input type="text"
+               class="form-control"
+               id="username"
+               ng-model="username"
+               minlength="6"
+               placeholder="username here">
+      </div>
+
+      <div class="form-group">
+        <label for="password">Password:</label>
+        <input type="password"
+               class="form-control"
+               id="password"
+               ng-model="password"
+               minlength="6"
+               placeholder="password here">
+
+        <p ng-show="regForm.password.$error"
+           class="help-block">
+          Password is too short
+        </p>
+      </div>
+
+      <div class="form-group">
+        <label for="passwordRe">Repeat password:</label>
+        <input type="password"
+               class="form-control"
+               id="passwordRe"
+               ng-model="passwordRe"
+               minlength="6"
+               placeholder="repeat password">
+      </div>
+
+      <div class="form-group text-left">
+        <button class="btn btn-lg btn-success"
+                ng-click="send(username, password, passwordRe)">
+          Register
+        </button>
+      </div>
+    </form>
+
+  </div>
+</div>

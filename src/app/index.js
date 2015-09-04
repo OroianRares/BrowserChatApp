@@ -7,6 +7,11 @@ angular.module('chat', ['ngTouch', 'restangular', 'ui.router', 'ui.bootstrap', '
         url: '/',
         templateUrl: 'app/main/main.html',
         controller: 'chatCtrl'
+      })
+      .state('signup', {
+        url: '/signup/',
+        templateUrl: 'app/auth/signupView.html',
+        controller: 'signupCtrl'
       });
 
     $urlRouterProvider.otherwise('/');
