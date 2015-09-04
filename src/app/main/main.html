@@ -6,15 +6,15 @@
     <br>
 
     <div class="row">
-      <button class="btn btn-lg btn-success">Log in</button>
-      <button class="btn btn-lg btn-default">Sign up</button>
+        <button class="btn btn-lg btn-success"
+                ng-controller="loginModalCtrl"
+                ng-click="open('md')">
+          Log in
+        </button>
+      <button class="btn btn-lg btn-default" ui-sref="signup">Sign up</button>
     </div>
 
     <br>
-
-    <div ng-controller="loginModalCtrl">
-      <button class="btn btn-lg btn-info" ng-click="open('md')">Open modal</button>
-    </div>
 
   </div>
 </div>
