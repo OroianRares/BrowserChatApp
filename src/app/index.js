@@ -1,12 +1,12 @@
 'use strict';
 
-angular.module('test', ['ngTouch', 'restangular', 'ui.router', 'ui.bootstrap'])
+angular.module('chat', ['ngTouch', 'restangular', 'ui.router', 'ui.bootstrap'])
   .config(function($stateProvider, $urlRouterProvider) {
     $stateProvider
       .state('home', {
         url: '/',
         templateUrl: 'app/main/main.html',
-        controller: 'MainCtrl'
+        controller: 'chatCtrl'
       });
 
     $urlRouterProvider.otherwise('/');
