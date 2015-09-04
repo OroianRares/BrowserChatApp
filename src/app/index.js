@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('chat', ['ngTouch', 'restangular', 'ui.router', 'ui.bootstrap'])
+angular.module('chat', ['ngTouch', 'restangular', 'ui.router', 'ui.bootstrap', 'chat.auth'])
   .config(function($stateProvider, $urlRouterProvider) {
     $stateProvider
       .state('home', {
