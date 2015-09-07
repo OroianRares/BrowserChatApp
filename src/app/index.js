@@ -8,6 +8,7 @@ angular
     'ui.bootstrap',
     'AlgoTechChat.auth',
     'AlgoTechChat.chat',
+    'AlgoTechChat.data.manage',
     'common.services'
   ])
   .config(function($stateProvider, $urlRouterProvider, RestangularProvider) {
