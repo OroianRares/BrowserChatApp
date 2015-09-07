@@ -5,7 +5,7 @@
     'use strict';
 
   angular
-    .module('AlgoMaskChat.data.manage')
+    .module('AlgoTechChat.data.manage')
     .factory('dataService', dataServiceFunc);
 
   dataServiceFunc.$inject = ['Restangular'];
@@ -28,7 +28,7 @@
     }
 
     function getUsersList() {
-      return baseUsers.all('accounts').getList().$object;
+      return baseUsers.all('').getList().$object;
     }
 
     function createAccount(newAccount) {

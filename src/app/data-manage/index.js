@@ -4,7 +4,7 @@
 (function dataManageIIFE() {
     'use strict';
 
-  angular.module('AlgoMaskChat.data.manage', [
+  angular.module('AlgoTechChat.data.manage', [
     'restangular'
   ]);
 
