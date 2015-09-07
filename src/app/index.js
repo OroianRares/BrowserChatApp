@@ -7,7 +7,8 @@ angular
     'ui.router',
     'ui.bootstrap',
     'AlgoTechChat.auth',
-    'AlgoTechChat.chat'
+    'AlgoTechChat.chat',
+    'common.services'
   ])
   .config(function($stateProvider, $urlRouterProvider) {
     $stateProvider
