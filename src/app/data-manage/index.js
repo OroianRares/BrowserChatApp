@@ -5,7 +5,7 @@
     'use strict';
 
   angular.module('AlgoMaskChat.data.manage', [
-
+    'restangular'
   ]);
 
 })();
