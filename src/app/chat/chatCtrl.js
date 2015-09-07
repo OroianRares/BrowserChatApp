@@ -8,11 +8,12 @@
     .module('AlgoTechChat.chat')
     .controller('chatCtrl', chatCtrlFunc);
 
-  chatCtrlFunc.$inject = ['$scope'];
+  chatCtrlFunc.$inject = ['$scope', 'dataService'];
 
   /* @ngInject */
-  function chatCtrlFunc($scope) {
+  function chatCtrlFunc($scope, dataService) {
     $scope.message = 'hello!';
+    dataService.getUsers();
   }
 
  })();
