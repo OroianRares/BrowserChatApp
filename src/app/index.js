@@ -10,7 +10,7 @@ angular
     'AlgoTechChat.chat',
     'common.services'
   ])
-  .config(function($stateProvider, $urlRouterProvider) {
+  .config(function($stateProvider, $urlRouterProvider, RestangularProvider) {
     $stateProvider
       .state('home', {
         url: '/',
@@ -29,5 +29,11 @@ angular
       });
 
     $urlRouterProvider.otherwise('/');
+
+
+    RestangularProvider
+      .setBaseUrl('http://10.0.1.15:7000/api/');
+
+
   })
 ;
