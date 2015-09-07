@@ -14,20 +14,31 @@
   function dataServiceFunc(Restangular) {
     var baseUsers = Restangular.all('users');
     var service = {
-      updateUser: updateUser,
-      getUsers: getUsersList,
+      login: login,
+      logout: logout,
       createAccount: createAccount,
-      getUser: getUser
+
+      getUser: getUser,
+      updateUser: updateUser,
+      getUsers: getUsersList
     };
 
     return service;
 
 
+    function login(email, password) {
+
+    }
+
+    function logout(token) {
+
+    }
+
     function updateUser(user) {
       return user.save();
     }
 
-    function getUsersList() {
+    function getUsersList(token) {
       return baseUsers.all('').getList().$object;
     }
 
