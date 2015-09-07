@@ -1,6 +1,14 @@
 'use strict';
 
-angular.module('chat', ['ngTouch', 'restangular', 'ui.router', 'ui.bootstrap', 'chat.auth'])
+angular
+  .module('AlgoTechChat', [
+    'ngTouch',
+    'restangular',
+    'ui.router',
+    'ui.bootstrap',
+    'AlgoTechChat.auth',
+    'AlgoTechChat.chat'
+  ])
   .config(function($stateProvider, $urlRouterProvider) {
     $stateProvider
       .state('home', {

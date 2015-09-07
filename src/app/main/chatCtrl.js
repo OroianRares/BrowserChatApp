@@ -1,5 +1,5 @@
 angular
-  .module('chat')
+  .module('AlgoTechChat')
   .controller('chatCtrl', chatCtrlFunc);
 
 chatCtrlFunc.$inject = ['$scope'];

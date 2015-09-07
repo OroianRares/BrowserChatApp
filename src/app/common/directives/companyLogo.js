@@ -2,7 +2,7 @@
  * Created by rares on 04/09/15.
  */
 angular
-    .module('chat')
+    .module('AlgoTechChat')
     .directive('companyLogo', companyLogoFunc);
 
 function companyLogoFunc() {

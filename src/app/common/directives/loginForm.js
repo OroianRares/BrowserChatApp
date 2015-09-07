@@ -6,7 +6,7 @@
   'use strict';
 
   angular
-    .module('chat')
+    .module('AlgoTechChat')
     .directive('loginForm', loginFormFunc);
 
   function loginFormFunc() {

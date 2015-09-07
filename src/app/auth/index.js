@@ -4,7 +4,7 @@
 (function authModuleIIFE() {
     'use strict';
 
-  angular.module('chat.auth', [
+  angular.module('AlgoTechChat.auth', [
 
   ]);
 

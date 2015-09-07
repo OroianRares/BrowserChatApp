@@ -5,7 +5,7 @@
     'use strict';
 
   angular
-    .module('chat.auth')
+    .module('AlgoTechChat.auth')
     .controller('signupCtrl', signupCtrlFunc);
 
   signupCtrlFunc.$inject = ['$scope'];
