@@ -1,49 +1,71 @@
 <div class="container-fluid">
-  <div class="col-md-6" style="border: 5px solid green">
+  <div class="col-md-6 col-md-offset-2" style="border: 5px solid green">
     <company-logo></company-logo>
     <hr>
     <h2 class="text-center" style="color: darkblue">Register new account</h2>
+
     <form name="regForm">
-      <div class="form-group">
+      <div class="form-group"
+           ng-class="{ 'has-warning': regForm.username.$error.minlength }">
         <label for="username">Username:</label>
         <input type="text"
                class="form-control"
+               ng-class="{ error: regForm.username.$invalid }"
                id="username"
-               ng-model="username"
+               name="username"
+               ng-model="user.username"
                minlength="6"
                placeholder="username here">
       </div>
 
-      <div class="form-group">
+      <div class="form-group"
+           ng-class="{ 'has-warning': regForm.password.$error.minlength }">
         <label for="password">Password:</label>
         <input type="password"
                class="form-control"
                id="password"
-               ng-model="password"
+               name="password"
+               ng-model="user.password"
                minlength="6"
+               maxlength="40"
                placeholder="password here">
 
-        <p ng-show="regForm.password.$error"
-           class="help-block">
+        <p ng-show="regForm.password.$error.minlength && regForm.password.$dirty"
+           class="help-block bg-warning">
           Password is too short
         </p>
       </div>
 
-      <div class="form-group">
+      <div class="form-group"
+           ng-class="{ 'has-warning': regForm.passwordRe.$error.minlength }">
         <label for="passwordRe">Repeat password:</label>
         <input type="password"
                class="form-control"
                id="passwordRe"
-               ng-model="passwordRe"
+               name="passwordRe"
+               ng-model="user.passwordRe"
                minlength="6"
+               maxlength="40"
                placeholder="repeat password">
+
+        <p ng-show="regForm.passwordRe.$error.minlength && regForm.passwordRe.$dirty"
+           class="help-block bg-warning">
+          Password is too short
+        </p>
       </div>
 
       <div class="form-group text-left">
         <button class="btn btn-lg btn-success"
-                ng-click="send(username, password, passwordRe)">
+                ng-click="send(user.username, user.password, user.passwordRe)">
           Register
         </button>
+        <button class="btn btn-lg btn-default" ui-sref="home">Back</button>
+        <div ng-show="invalidationMessage">
+          <br>
+          <div class="bg-danger">
+            <h3 class="text-center"> {{invalidationMessage}} </h3>
+          </div>
+        </div>
       </div>
     </form>
 
